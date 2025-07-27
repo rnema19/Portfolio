@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
+import { MdLiveTv } from "react-icons/md";
 
 function ProjectCards(props) {
   return (
@@ -20,17 +21,17 @@ function ProjectCards(props) {
         {"\n"}
         {"\n"}
 
-        {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
+        {/* If the component contains live link and if it's not a Blog then, it will render the below component  */}
 
-        {!props.isBlog && props.demoLink && (
+        {!props.isBlog && props.liveLink && (
           <Button
             variant="primary"
-            href={props.demoLink}
+            href={props.liveLink}
             target="_blank"
             style={{ marginLeft: "10px" }}
           >
-            <CgWebsite /> &nbsp;
-            {"Demo"}
+            <MdLiveTv /> &nbsp;
+            {"Live"}
           </Button>
         )}
       </Card.Body>
